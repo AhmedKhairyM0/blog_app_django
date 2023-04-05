@@ -4,7 +4,6 @@
 {% block content %}
     <h2>{{ object.title }}</h2>
     <p>{{object.body }} | {{ object.author}}</p>
-    <div>
-        <a href="{% url 'post_edit' object.pk%}">+ Edit Post</a>
-    </div>
+    <div><a href="{% url 'post_edit' object.pk%}">+ Edit Post</a></div>
+    <div><a href="{% url 'post_delete' object.pk%}">- Delete Post</a></div>
 {% endblock content %}
